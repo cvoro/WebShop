@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+<div *ngFor="let monitor of monitor">
+    <h3>{{monitor.name}}</h3>
+    <div><img src="{{monitor.img}}"> </div>
+    <button (click)="showMonitors()">Details</button>
+    <div *ngIf="vidljivo">
+        <h4> {{monitor.tip}} {{monitor.dijagonala}} {{monitor.rezolucija}} {{monitor.osvetljenje}} {{monitor.kontrast}}</h4>
+    </div>
+    <!--<div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret" *ngFor="let monitor of monitor"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">{{monitor.tip}}</a></li>
+            <li><a href="#">{{monitor.dijagonala}}</a></li>
+            <li><a href="#">{{monitor.rezolucija}}</a></li>
+            <li><a href="#">{{monitor.osvetljenje}} </a></li>
+            <li><a href="#">{{monitor.kontrast}}</a></li>
+        </ul>
+    </div>-->
+</div>
