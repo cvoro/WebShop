@@ -1,5 +1,5 @@
-<h1>{{title}}</h1>
+<input [(ngModel)]="title" (ngModelChange)="title=($event)">
 <div *ngFor="let hard of Hard">
     <h3>{{hard.name}}</h3>
-    <h6><img src="{{hard.img}}"> </h6>
+    <h6 *ngIf="auth.authenticated()"><img src="{{hard.img}}"> </h6>
 </div>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HardsService } from '../services/hard-drive.service';
 import {Hard} from '../../hard.class';
+import {Auth} from '../services/auth.service';
+
 
 @Component({
   selector: 'hard-drive',
@@ -20,7 +22,8 @@ obrtaji: string;
 // Post: Post;
 
 
-    constructor(private hardsService: HardsService){ 
+
+    constructor(private hardsService: HardsService, private auth: Auth){ 
         this.hardsService.getHards().subscribe(Hard => {
             this.Hard = Hard});
     }  
